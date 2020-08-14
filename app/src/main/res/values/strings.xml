@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">sissy.edu</string>
+    <string name="inedx_page_url">file:///android_asset/public/index.html</string>
+    <string name="save_failed_hint">Save failed with IOException please check permissions.</string>
+</resources>
