@@ -37,7 +37,8 @@ public class JavaScriptInterface {
         try {
             convertBase64StringToPdfAndStoreIt(base64Data);
         } catch (IOException e) {
-            Toast.makeText(context, context.getString(R.string.save_failed_hint), Toast.LENGTH_SHORT).show();
+            String msg = e.getMessage();
+            Toast.makeText(context, context.getString(R.string.save_failed_hint) + msg, Toast.LENGTH_SHORT).show();
         }
     }
 
