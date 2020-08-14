@@ -14,4 +14,8 @@ sissy university 移动课程中心。来自`抖喵家`的在线XXXX和XXX的单
 
 ## Use
 
-该App会请求本地存储权限用于数据导出，禁止该权限不影响其他功能。
+本版本的存档文件与网页版和PC版兼容。
+
+该App会请求本地存储权限用于数据导出，禁止该权限不影响其他功能。导出记录文件位于设备默认下载目录，一般为`/storage/emulated/0/Download/`。
+
+发现BUG请在此Repo提交Issue或PR。
