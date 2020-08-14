@@ -75,6 +75,19 @@ public class JavaScriptInterface {
         os = new FileOutputStream(dwldsPath, false);
         os.write(pdfAsBytes);
         os.flush();
+
         Toast.makeText(context, "Save to " + dwldsPath.getPath(), Toast.LENGTH_LONG).show();
+
+        if (dwldsPath.exists()) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            Uri apkURI = FileProvider.getUriForFile(context,context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
+            sendIntent.putExtra(Intent.EXTRA_STREAM, apkURI);
+            sendIntent.setType("application/octet-stream");
+            sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            context.startActivity(Intent.createChooser(sendIntent, "Save to..."));
+        }
+
     }
 }

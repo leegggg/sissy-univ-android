@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
         setupWebSettings(webSettings);
 
         // Set js interface and downloadListener for blob download in progress saving
-        mainWebView.addJavascriptInterface(new JavaScriptInterface(getBaseContext()), "Android");
+        mainWebView.addJavascriptInterface(new JavaScriptInterface(this), "Android");
         mainWebView.setDownloadListener(new DownloadListener() {
             @Override
             public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimeType, long contentLength) {

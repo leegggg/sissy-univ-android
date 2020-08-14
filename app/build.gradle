@@ -18,8 +18,8 @@ android {
         applicationId "net.linyz.site.sissyuniv"
         minSdkVersion 26
         targetSdkVersion 29
-        versionCode 121
-        versionName "1.0.121b"
+        versionCode 127
+        versionName "v1.0.${versionCode}b"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,7 +27,7 @@ android {
         variant ->
             variant.outputs.all {
                 // 此处指定生成的apk文件名
-                outputFileName = "net.linyz.site.sissyuniv-v1.0.121b_rev121_${new Date().format('yyyy-MM-dd', TimeZone.getTimeZone('UTC'))}.apk"
+                outputFileName = "${defaultConfig.applicationId}-${defaultConfig.versionName}_rev${defaultConfig.versionCode}_${new Date().format('yyyy-MM-dd', TimeZone.getTimeZone('UTC'))}.apk"
             }
     }
     buildTypes {
