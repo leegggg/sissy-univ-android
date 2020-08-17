@@ -16,9 +16,9 @@ android {
 
     defaultConfig {
         applicationId "net.linyz.site.sissyuniv"
-        minSdkVersion 26
+        minSdkVersion 21
         targetSdkVersion 29
-        versionCode 127
+        versionCode 128
         versionName "v1.0.${versionCode}b"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
