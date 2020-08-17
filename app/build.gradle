@@ -18,7 +18,7 @@ android {
         applicationId "net.linyz.site.sissyuniv"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 128
+        versionCode 129
         versionName "v1.0.${versionCode}b"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
