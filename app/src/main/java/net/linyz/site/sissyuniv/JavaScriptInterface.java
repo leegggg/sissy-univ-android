@@ -24,6 +24,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class JavaScriptInterface {
     private Context context;
@@ -66,7 +67,7 @@ public class JavaScriptInterface {
 
     private void convertBase64StringToPdfAndStoreIt(String base64PDf) throws IOException {
         final int notificationId = 1;
-        SimpleDateFormat dateFmt= new SimpleDateFormat("yyyy-MM-dd_HHmmss");
+        SimpleDateFormat dateFmt= new SimpleDateFormat("yyyy-MM-dd_HHmmss", Locale.ENGLISH);
         String currentDateTime = dateFmt.format(new Date());
         final File dwldsPath = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOWNLOADS) + "/suSave_" + currentDateTime + "_.suSave");
