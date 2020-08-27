@@ -30,9 +30,17 @@ public class MainActivity extends Activity {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             if (keyCode == KeyEvent.KEYCODE_BACK) {
                 if (mainWebView != null) {
-                    mainWebView.loadUrl(getBaseContext().getString(R.string.inedx_page_url));
+                    String clickJs = "document.getElementById(\"btn-back\").click();";
+                    mainWebView.evaluateJavascript(clickJs, new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String value) {
+                            Log.i("JsBack",value);
+                        }
+                    });
                 }
                 return true;
+            }else if (keyCode == KeyEvent.KEYCODE_MENU){
+                mainWebView.loadUrl(getBaseContext().getString(R.string.inedx_page_url));
             }
         }
         return super.onKeyDown(keyCode, event);
